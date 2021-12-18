@@ -1,0 +1,65 @@
+@font-face{
+	font-family: font1;
+	src: url("C:\Users\User\Desktop\Кирилл\htmlC:\Users\User\Desktop\Кирилл\html\impact.ttf");
+}
+
+}
+body{
+	margin: 0;
+	font-size: 0;
+}
+a{
+	text-decoration-line: none;
+}
+#header{
+	position: sticky;
+	top: 0;
+	height: 50px;
+	background-color: #222;
+}
+#header .btn{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	height: 30px;
+	font-size: 30px;
+	line-height: 30px;
+	color: #ddd;
+	font-family: font4;
+}
+#header .btn:hover{
+	color: #fff;
+}
+#header .logo{
+	padding: 5px;
+	height: 40px;
+}
+#header .logo img{
+	height: 100%;
+}
+#content{
+	background-color: #000;
+	min-height: 100vh;
+}
+#content .block{
+
+}
+#content .block video{
+	width: 100%;
+}
+#footer{
+	padding: 50px;
+	background-color: #111;
+	text-align: center;
+}
+#footer span{
+	color: #aaa;
+	font-size: 16px;
+	margin: 10px;
+}
+#footer span a{
+	color: #aaa;
+}
+#footer span a:hover{
+	text-decoration-line: underline;
+}
