@@ -1,3 +1,4 @@
+
 body{
 	margin:0;
 	margin-top:50px;
@@ -10,8 +11,8 @@ body{
 	left:0;
 	right:0;
 	top:0;
-	height:40px;
-	padding:5px;
+	height:50px;
+	font-size: 47px;
 	background-color: #b946f2;
 	text-align: center;
 	background-color: rgba(0, 40, 41, 0.9);
@@ -23,129 +24,176 @@ body{
 
 
 }
+
 #header .logo-btn{
 	display: inline-block;
 	vertical-align: top;
 	padding: 5px;
 	margin-right: 50px;
 	height: 40px;
+	vertical-align: top;
+	color:#fff;
+
+
 }
-#header .logo-btn img{
-	height: 100%;
-}
-#header a img{
+#header .logo-btn{
 	height:100%;
 }
-.content .btn{
+#header .btn{
+	display: inline-block;
+	background-color: rgba(34, 34,34 0.6);
+	padding: 5px;
+	height: 40px;
+	vertical-align: top;
+}
+#header a{
+	text-decoration-line: none;
+}
+#header .btn .icon{
+	vertical-align: top;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-image: url("h.png");
+	background-size:125%;
+	background-position: 100% 0;
+}
+
+
+#header #btn1 .icon{
+	background-image: url("h.png");
+	opacity: 1;
+}
+
+#header #btn1:hover .icon{
+	background-image: url("h.gif");
+	box-shadow: inset 0 0 0 2px green;
+	opacity: 0.6;
+
+
+}
+#header #btn2 .icon{
+	background-image: url("h.png");
+}
+#header #btn2:hover .icon{
+	background-image: url("h.gif");
+	box-shadow: inset 0 0 0 2px darkred;
+}
+#header .btn .text{
+	display: inline-block; 
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 10px;
+	line-height: 20px;
+	vertical-align: top;
+}
+#header .btn .menu{
+	position: absolute;
+	padding: 25px;
+	transform: translateY(-50%)scaleY(0);
+	background-color: rgba(32, 32, 32, 0.8);
+	transition-duration: 200ms;
+	width: 350px;
+	left: 0;
+	top: 100%;
+	
+}
+#header .btn{
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	padding: 2px;
-	height: 5px;
-	font-size: 5px;
-	line-height: 5px;
+	padding: 5px;
+	height: 40px;
+	background-color: rgba(32 , 32 ,32, 0);
+
+	
+}
+#header .btn:hover{
+	background-color: rgba(32 , 32 ,32 , 0.8);
 }
 
+#header .btn:hover .menu{
+	transform:translateY(0) scaleY(1) ;
+	background-color: rgba(32, 32, 32, 0.8);
+}
+#header .btn .menu-btn{
+	display:inline-block;
+	width: 90px;
+	padding:5px;
+	vertical-align: top;
+	transition-duration: 700ms;
+}
+#header .btn .menu-btn:hover{
+	transform: scale(1.2);
+}
+#header .btn .menu-btn-img{
+	height: 160px;
+	width: 90px;
+	background-size: cover;
+	background-position: 85% 50%;
+	
+}
+#header .btn #menu-btn3 .menu-btn-img{
+	height: 160px;
+	width: 90px;
+	background-size: cover;
+	background-position: 40% 55%;
+}
+#header .btn #menu-btn2 .menu-btn-img{
+	height: 160px;
+	width: 90px;
+	background-size: cover;
+	background-position: 45% 55%;
+}
+#header .btn  .menu-btn-text{
+	text-transform: none;
+	font-size: 16px;
+	width:90px;
+	color:#aaa;
+	padding:0;
+}
+#header .btn .arrow{
+	display: inline-block;
+	vertical-align: top;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	background-color: #f00;
+	background-image: url(g.png);
+	background-size: cover;
+	margin-left: 0;
+	transition-duration: 200ms;
+	transform :rotate(90deg)
+}
+#header .btn:hover .arrow{
+	transform: rotate(270deg);
+	transition-duration: 300ms;
+}
+#menu-btn1 .menu-btn-img{
+	background-image: url(hg.webp);
+}
+#menu-btn2 .menu-btn-img{
+	background-image: url(w.jpg);
+
+}
+#menu-btn3 .menu-btn-img{
+	background-image: url(p.jpg);
+
+}
 .content{
 	background-color: #0e3057;
 	width:640px;
-	min-height: 1000px;
+	min-height: 2000px;
 	margin:auto;
 	border-radius: 10px;
 	overflow-x: hidden;
 
-}
-.block{
-	position: relative;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	overflow-x: hidden;
-}
-.block .block-img{
-	width: 100%;
-}
-#block1 .text{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 400px;
-	margin: 20px;
-	text-align: right;
-	color: #fff;
-	font-size: 19px;
-	text-shadow: 0 0 2px #000;
-	font-family: monospace;
-}
-#block1 .text .btn{
-	padding: 5px;
-	background-color: #c4a100;
-	display: inline-block;
-	color: #b00;
-	border: outset 3px #d6b000;
-	border-radius: 5px;
-	box-shadow: 0 0 5px #000;
-	}
-#block2 .text{
-	position: absolute;
-	left: 0;
-	top: 0;
-	margin: 30px;
-	max-width: 300px;
-	text-align: left;
-	font-size: 16px;
-	color: #000;
-	text-shadow: 0 0 1px #bba;
-	font-family: monospace;
-}
-#block2 .text p{
-	font-size: 22px;
-	text-transform: uppercase;
-}
-#block2 .text a{
-	text-decoration-line: none;
-}
-#block2 .text .btn{
-	display: inline-block;
-	padding: 10px;
-	margin: 10px;
-	margin-left: 0;
-	border: ridge 3px #bba;
-	border-radius: 5px;
-	background-color: rgba(0,0,0,0.8);
-	color: #bba;
-	font-size: 20px;
-	text-transform: uppercase;
-}
-#block3 .text{
-	position: absolute;
-	right: 30px;
-	top: 30px;
-	width: 350px;
-	text-align: right;
-	font-size: 17px;
-	text-shadow: 0 0 1px #bba;
-	font-family: monospace;
-}
-#block4 .box{
-	position: relative;
-}
-#block4 .box img{
-	width: 30%;
-	height: 50%;
-	margin: auto;
-	margin-left: 120px;
-	vertical-align: middle;
-	border-radius: 5px;
+
 
 }
-#block4 .box .text{
-	width: 46%;
-	margin: 2%;
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 16px;
+
 }
-.table1 td{
+#table1 td{
 	width: 100px;
 	height: 100px;
 	background-size: cover;
@@ -157,29 +205,29 @@ body{
     text-align: center;
     transition-duration: 500ms;
 	transition-property: transform;
-	border-color: yellow;
 
 }
-.table1 {
-    width: 1200px; 
-    border: 3px yellow; 
-    background-color: black;
+#table1 {
+    width: 640px; 
+    border: 1px solid #fff; 
     margin: auto; 
     transition-duration: 500ms;
 	transition-property: transform;
-	border-bottom-style: dotted;
-	border-top-style: dashed;
-
-
    }
+#table1 td{
+	transition-duration: 1s;
+	background-size: cover;
 
-.table1 td:hover{
+}
+#table1 td:hover{
 	transform: scale(1.25);
 
 }
-.table1 td div{
-	height:100%;
-	width:100%;
+#table1 td div{
+	height:100px;
+	width:100px;
+	background-size: contain;
+
 }
 
 .d11{
@@ -221,6 +269,7 @@ body{
 .d23{background-image: url("u.png")
 	
 }
+
 #block1 .text{
 	position: absolute;
 	left: 0;
@@ -247,11 +296,127 @@ body{
 	font-size: 10px;
 	border-style: inset;
 }
+.Text{
+	font-size: 20px;
+}
+#block4 .box{
+	position: relative;
+	height: 200px;
+}
+#block4 .box img{
+	width: 46%;
+	padding: 2%;
+	vertical-align: middle;
+}
+#block4 .box .text{
+	left: 0;
+	position: relative;
+	width: 46%;
+	padding: 2%;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	background-color: darkred;
+	color: royalblue;
 
+}
+#block5{
+
+}
+#block5 .el{
+	height: 150px;
+	width: 150px;
+	overflow: hidden;
+	background-color: #f00;
+	position: relative;
+	display: inline-block;
+
+}
+#block5 .el1 .el-img{
+	margin-left: -30%;
+}
+#block5 .el2 .el-img{
+	margin-left: -70%;
+}
+#block5 .el3 .el-img{
+	margin-left: -50%;
+}
+#block5 .el4 .el-img{
+	margin-left: -40%;
+}
+#block5 .el5 .el-img{
+	margin-left: -80%;
+}
+#block5 .el5{
+	height: 300px;
+	width: 300px;
+}
+#block5 .el6{
+	height: 300px;
+	width: 300px;
+}
+#block5 .el7 .el-img{
+	margin-left: -70%;
+}
+#block5 .el8 .el-img{
+	margin-left: -30%;
+
+}
+#block5 .el .el-img{
+	height: 100%;
+	transition-duration:2s ;
+}
+#block5 .el:hover .el-img{
+	transform: scale(1.1);
+	t
+}
+#block5 .wrapper{
+	position: relative;
+	margin: auto;
+	width: 600px;
+}
+#block5  .description{
+	position: absolute;
+	background-color: rgba(0,0,0, 0.7);
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+}
+#block5 .el .description .type{
+	font-size: 10px;
+	line-height: 10px;
+	height: 10px;
+	padding: 5px;
+	background-color: #222;
+	color: #bbb;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -10px;
+
+}
+#block5 .el .description .text-big{
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #fff
+}
+#block5 .el .description .text-small{
+	font-size: 0px;
+	color: #fff;
+	transition-duration: 2s;
+	width: 0;
+	margin: auto;
+}
+#block5 .el:hover .description .text-small{
+	font-size: 15px;
+	width: 100%;
+}
 .block{
 	position: relative;
 }
-.block img{
+.block .block-img{
 	width: 100%;
 }
 #menu{
@@ -302,5 +467,11 @@ body{
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover{
-	background-color: #111;
+	background-color: darkgoldenrod;
 }
+::-webkit-scollbar:hover{
+	color:darkred;}
+
+
+
+
