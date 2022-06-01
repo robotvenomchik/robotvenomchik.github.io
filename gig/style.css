@@ -1,0 +1,64 @@
+body{
+
+}
+.sidebar{
+	background-color: #26262b;
+	margin-top: 20px;
+	width: 250px;
+	margin-left: 300px;
+	position: absolute;
+	height: 1450px;
+}
+.photo{
+	width: 250px;
+	height: 250px;
+}
+.main-content{
+	position: absolute;
+	margin-left: 600px;
+	margin-top: 60px;
+}
+.list{
+	width: 700px;
+	height: 300px;
+	margin-bottom: 100px;
+}
+.list2{
+	width: 700px;
+	height: 300px;
+}
+.man{
+	margin-bottom: 50px ;
+}
+.nummer a{
+	text-decoration-line: none;
+}
+.nummer{
+	color: navajowhite;
+	margin-left: 20px ;
+}
+.teach{
+	margin-left: 20px;
+	color: orange;
+}
+.sidebar h2{
+	margin-left: 40px;
+	color: orange;
+}
+.teach ul{
+	margin-right: 50px;
+}
+.teach p{
+	color: snow;
+}
+.soft{
+	margin-left: 20px;
+	color: orange;
+}
+
+.soft p{
+	color: snow;
+}
+.education{
+	margin-left: 30px;
+}
