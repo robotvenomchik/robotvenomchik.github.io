@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyrylo Lypenko</title>
+<meta name="description" content="Electrical engineering and computer science student at CTU in Prague. Embedded systems, software, cybersecurity, math.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1f5f9; --grid:#d5dee8; --ink:#16233a; --muted:#51607a; --accent:#2446d6; --card:#ffffff;
+  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0f1726; --grid:#1c2740; --ink:#e6ecf7; --muted:#9aa8c2; --accent:#7f9bff; --card:#152036;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:1.125rem; line-height:1.65;
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+main{max-width:46rem; margin:0 auto; padding:4rem 1.5rem 3rem}
+h1,h2{font-family:var(--head); line-height:1.05; margin:0}
+h1{font-size:clamp(3rem,11vw,5.5rem); font-weight:800; letter-spacing:-.03em}
+h2{font-size:1.6rem; font-weight:800; letter-spacing:-.01em; margin-bottom:1rem}
+.lead{font-size:1.3rem; max-width:34rem; margin:1.25rem 0 0}
+.signal{display:block; width:100%; height:70px; margin:2rem 0 0; color:var(--accent)}
+.signal path{fill:none; stroke:currentColor; stroke-width:3; stroke-linecap:round;
+  stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.2s ease-out .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.signal path{animation:none; stroke-dashoffset:0}}
+section{margin-top:3.5rem}
+p{margin:0 0 1rem; max-width:38rem}
+ul.focus{list-style:none; padding:0; margin:0; display:grid; gap:.75rem}
+ul.focus li{background:var(--card); border-left:4px solid var(--accent); padding:.7rem 1rem}
+ul.focus b{font-family:var(--head); font-weight:800; margin-right:.4rem}
+.project{background:var(--card); border:2px solid var(--ink); padding:1.25rem 1.4rem}
+.project h3{font-family:var(--head); margin:0 0 .4rem; font-size:1.3rem}
+.project p{margin:0}
+a{color:var(--accent); text-underline-offset:.2em}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+footer{margin-top:4rem; color:var(--muted); font-size:1rem}
+.links{display:flex; flex-wrap:wrap; gap:1.25rem; font-family:var(--head); font-weight:500; font-size:1.1rem}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Kyrylo Lypenko</h1>
+    <p class="lead">I study electrical engineering and computer science at CTU in Prague, and I like building things where hardware meets code.</p>
+    <svg class="signal" viewBox="0 0 700 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 35 C 25 -5, 50 -5, 75 35 S 125 75, 150 35 S 200 -5, 225 35 S 275 75, 300 35 L 330 35 L 330 8 L 380 8 L 380 62 L 430 62 L 430 8 L 480 8 L 480 35 L 700 35"/>
+    </svg>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I'm a first-year student in the English-taught Electrical Engineering and Computer Science program at the Czech Technical University (CTU / ČVUT) in Prague.</p>
+    <p>I have a background in cybersecurity coursework and I'm still drawn to that field. Right now I'm working through calculus, linear algebra and discrete math, and I practise writing in English every week.</p>
+  </section>
+
+  <section>
+    <h2>What I work on</h2>
+    <ul class="focus">
+      <li><b>Embedded systems</b>microcontrollers, sensors and firmware</li>
+      <li><b>Software development</b>small tools and projects that I can finish and ship</li>
+      <li><b>Cybersecurity</b>learning how systems break so I can build them better</li>
+      <li><b>Mathematics</b>the foundation under all of the above</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Project</h2>
+    <div class="project">
+      <h3>SafeGuard</h3>
+      <p>A wearable emergency response device built on the ESP32. It is meant to get help to a person quickly when something goes wrong.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Find me</h2>
+    <div class="links">
+      <a href="https://github.com/robotvenomchik">GitHub</a>
+    </div>
+  </section>
+
+  <footer>Prague, Czechia</footer>
+</main>
+</body>
+</html>
