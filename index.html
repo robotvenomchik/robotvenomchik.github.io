@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kyrylo Lypenko</title>
-<meta name="description" content="Electrical engineering and computer science student at CTU in Prague. Embedded systems, software, cybersecurity, math.">
+<meta name="description" content="Electrical engineering and computer science student at CTU in Prague. Embedded systems, software, cybersecurity, math. Certificates and achievements.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
   :root{--paper:#0f1726; --grid:#1c2740; --ink:#e6ecf7; --muted:#9aa8c2; --accent:#7f9bff; --card:#152036;}
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth; scroll-padding-top:4.5rem}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--body); font-size:1.125rem; line-height:1.65;
@@ -28,72 +28,291 @@ body{
     linear-gradient(90deg,var(--grid) 1px,transparent 1px);
   background-size:32px 32px;
 }
-main{max-width:46rem; margin:0 auto; padding:4rem 1.5rem 3rem}
-h1,h2{font-family:var(--head); line-height:1.05; margin:0}
+main{max-width:46rem; margin:0 auto; padding:3.5rem 1.5rem 3rem}
+h1,h2,h3{font-family:var(--head); line-height:1.05; margin:0}
 h1{font-size:clamp(3rem,11vw,5.5rem); font-weight:800; letter-spacing:-.03em}
 h2{font-size:1.6rem; font-weight:800; letter-spacing:-.01em; margin-bottom:1rem}
+h2 small{font-weight:500; font-size:1rem; color:var(--muted); margin-left:.5rem}
 .lead{font-size:1.3rem; max-width:34rem; margin:1.25rem 0 0}
 .signal{display:block; width:100%; height:70px; margin:2rem 0 0; color:var(--accent)}
 .signal path{fill:none; stroke:currentColor; stroke-width:3; stroke-linecap:round;
   stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.2s ease-out .2s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.signal path{animation:none; stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.signal path{animation:none; stroke-dashoffset:0} html{scroll-behavior:auto}}
 section{margin-top:3.5rem}
 p{margin:0 0 1rem; max-width:38rem}
+a{color:var(--accent); text-underline-offset:.2em}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+.socials{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem}
+.pill{font-family:var(--head); font-weight:500; font-size:1rem; text-decoration:none; color:var(--ink);
+  background:var(--card); border:2px solid var(--ink); padding:.35rem .9rem; transition:background .15s,color .15s}
+.pill:hover{background:var(--ink); color:var(--paper)}
+
+nav.jump{position:sticky; top:0; z-index:5; background:var(--paper); border-bottom:2px solid var(--ink);
+  display:flex; gap:1.25rem; overflow-x:auto; padding:.6rem 1.5rem; font-family:var(--head); font-weight:500; white-space:nowrap}
+nav.jump a{color:var(--ink); text-decoration:none}
+nav.jump a:hover{color:var(--accent)}
+
 ul.focus{list-style:none; padding:0; margin:0; display:grid; gap:.75rem}
 ul.focus li{background:var(--card); border-left:4px solid var(--accent); padding:.7rem 1rem}
 ul.focus b{font-family:var(--head); font-weight:800; margin-right:.4rem}
 .project{background:var(--card); border:2px solid var(--ink); padding:1.25rem 1.4rem}
-.project h3{font-family:var(--head); margin:0 0 .4rem; font-size:1.3rem}
+.project h3{margin:0 0 .4rem; font-size:1.3rem}
 .project p{margin:0}
-a{color:var(--accent); text-underline-offset:.2em}
-a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+ul.docs{list-style:none; padding:0; margin:0; border:2px solid var(--ink); background:var(--card)}
+ul.docs li+li{border-top:1px solid var(--grid)}
+ul.docs a{display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 1rem;
+  color:var(--ink); text-decoration:none}
+ul.docs a:hover{background:var(--paper)}
+ul.docs a:hover .t{color:var(--accent)}
+.t{font-family:var(--head); font-weight:500}
+.m{font-size:.95rem; color:var(--muted); text-align:right}
+.m::after{content:" ↗"; color:var(--accent)}
+
+.langs{list-style:none; padding:0; margin:0 0 1.75rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr)); gap:.75rem}
+.langs li{background:var(--card); border-left:4px solid var(--accent); padding:.6rem .9rem; display:flex; flex-direction:column}
+.langs span{font-size:.95rem; color:var(--muted)}
+.langs b{font-family:var(--head); font-weight:800; font-size:1.5rem; line-height:1.2}
+h3.sub{font-size:1.1rem; font-weight:800; margin:0 0 .75rem}
+h3.sub small{font-weight:500; color:var(--muted); margin-left:.4rem}
+.project p+p{margin-top:.7rem}
+.hero{display:flex; align-items:center; gap:1.75rem; flex-wrap:wrap}
+.hero>div{flex:1 1 20rem}
+.portrait{width:160px; height:160px; object-fit:cover; object-position:50% 20%; border:3px solid var(--ink); background:var(--card); display:block}
+.logo{float:right; width:64px; height:64px; object-fit:cover; margin:0 0 .5rem 1rem; border:2px solid var(--ink)}
+.cards{display:grid; gap:1rem}
+ul.chips{list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-wrap:wrap; gap:.6rem}
+ul.chips li{font-family:var(--head); font-weight:500; font-size:1rem; background:var(--card); border:2px solid var(--ink); padding:.3rem .85rem}
+ul.bul{margin:.3rem 0 .6rem; padding-left:1.2rem; max-width:38rem}
+ul.bul li{margin-bottom:.3rem}
+.project h3.sub{font-size:1.1rem}
+.project .tag{font-family:var(--head); font-weight:500; font-size:.95rem; color:var(--muted); margin:0 0 .6rem}
+.note{margin-top:1.25rem; color:var(--muted)}
 footer{margin-top:4rem; color:var(--muted); font-size:1rem}
-.links{display:flex; flex-wrap:wrap; gap:1.25rem; font-family:var(--head); font-weight:500; font-size:1.1rem}
 </style>
 </head>
 <body>
+<nav class="jump" aria-label="Sections">
+  <a href="#work">Focus</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#languages">Languages</a>
+  <a href="#projects">Projects</a>
+  <a href="#awards">Awards</a>
+  <a href="#courses">Courses</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <main>
   <header>
-    <h1>Kyrylo Lypenko</h1>
-    <p class="lead">I study electrical engineering and computer science at CTU in Prague, and I like building things where hardware meets code.</p>
+    <div class="hero">
+      <img class="portrait" src="kyrylo.jpg" alt="Portrait of Kyrylo Lypenko" width="160" height="160">
+      <div>
+        <h1>Kyrylo Lypenko</h1>
+        <p class="lead">I study electrical engineering and computer science at CTU in Prague.</p>
+      </div>
+    </div>
+    <div class="socials">
+      <a class="pill" href="https://github.com/robotvenomchik">GitHub</a>
+      <a class="pill" href="https://www.linkedin.com/in/lypenko-kyrylo-255986300/">LinkedIn</a>
+      <a class="pill" href="https://t.me/venom06112008k">Telegram</a>
+      <a class="pill" href="https://www.instagram.com/rvenomchik/">Instagram</a>
+    </div>
     <svg class="signal" viewBox="0 0 700 70" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 35 C 25 -5, 50 -5, 75 35 S 125 75, 150 35 S 200 -5, 225 35 S 275 75, 300 35 L 330 35 L 330 8 L 380 8 L 380 62 L 430 62 L 430 8 L 480 8 L 480 35 L 700 35"/>
     </svg>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>I'm a first-year student in the English-taught Electrical Engineering and Computer Science program at the Czech Technical University (CTU / ČVUT) in Prague.</p>
-    <p>I have a background in cybersecurity coursework and I'm still drawn to that field. Right now I'm working through calculus, linear algebra and discrete math, and I practise writing in English every week.</p>
-  </section>
-
-  <section>
+  <section id="work">
     <h2>What I work on</h2>
-    <ul class="focus">
-      <li><b>Embedded systems</b>microcontrollers, sensors and firmware</li>
-      <li><b>Software development</b>small tools and projects that I can finish and ship</li>
-      <li><b>Cybersecurity</b>learning how systems break so I can build them better</li>
-      <li><b>Mathematics</b>the foundation under all of the above</li>
+    <ul class="chips">
+      <li>Cybersecurity</li>
+      <li>Electrical engineering</li>
+      <li>Embedded systems</li>
+      <li>Software development</li>
+      <li>Chatbots &amp; automation</li>
+      <li>Business analytics</li>
+      <li>Project management</li>
+      <li>Mathematics</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Project</h2>
-    <div class="project">
-      <h3>SafeGuard</h3>
-      <p>A wearable emergency response device built on the ESP32. It is meant to get help to a person quickly when something goes wrong.</p>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="cards">
+      <div class="project">
+        <h3>Freelance chatbot developer</h3>
+        <p class="tag">Yukon_voda, Arbex and other clients · Aug 2022 – present · Remote</p>
+        <ul class="bul">
+          <li>Development and configuration of chatbots using the Smart Sender platform</li>
+          <li>Designing dialog flows and user interaction logic</li>
+          <li>Integrating chatbots with websites and contact forms</li>
+          <li>Working with triggers, automated funnels and user segmentation</li>
+          <li>Testing and optimizing bots to improve user experience</li>
+        </ul>
+        <p><a href="https://smartsender.com" target="_blank" rel="noopener">Smart Sender ↗</a></p>
+      </div>
+      <div class="project">
+        <h3>Cybersecurity intern</h3>
+        <p class="tag">CyberField NeT · Internship · Aug 2025 – Dec 2025</p>
+        <ul class="bul">
+          <li>Information security fundamentals</li>
+          <li>Cyber threat analysis and attack mitigation</li>
+          <li>Network infrastructure protection</li>
+          <li>Incident monitoring and response</li>
+        </ul>
+        <p><a href="https://drive.google.com/file/d/1EO-LQGL_X9Arm9RRSNOk4IzO0wBUvS5B/view?usp=sharing" target="_blank" rel="noopener">View certificate (150/150) ↗</a></p>
+      </div>
+      <div class="project">
+        <h3>Vice President</h3>
+        <p class="tag">FinVision, a financial literacy initiative for teenagers · Part-time · Apr 2025 – Sep 2025 · Kyiv, hybrid</p>
+        <ul class="bul">
+          <li>Created and designed presentations for educational events and internal use</li>
+          <li>Searched for and coordinated venues for offline events</li>
+          <li>Took part in organizing and delivering educational events for teenagers</li>
+          <li>Communicated with participants, speakers and partners before and during events</li>
+          <li>Helped plan event logistics and schedules so everything ran smoothly</li>
+          <li>Contributed ideas to improve engagement and the format of activities</li>
+          <li>Helped organise three events: financial basics, an offline “Finance Talk”, and how the National Bank of Ukraine works</li>
+        </ul>
+        <p><a href="https://www.instagram.com/finvision.ua/" target="_blank" rel="noopener">FinVision on Instagram ↗</a></p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Find me</h2>
-    <div class="links">
-      <a href="https://github.com/robotvenomchik">GitHub</a>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="cards">
+      <div class="project">
+        <h3>Czech Technical University in Prague</h3>
+        <p class="tag">Faculty of Electrical Engineering · Bachelor's · 2026 – 2029</p>
+        <p>Electrical engineering and computer science, in the English-taught program.</p>
+      </div>
+      <div class="project">
+        <h3>Lyceum Harant Osvita</h3>
+        <p class="tag">High school diploma · 2016 – May 2026</p>
+      </div>
     </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills &amp; services</h2>
+    <h3 class="sub">Main skills</h3>
+    <ul class="chips">
+      <li>Cybersecurity</li>
+      <li>Project Management</li>
+      <li>Electrical Engineering</li>
+      <li>C++</li>
+      <li>Python</li>
+    </ul>
+    <h3 class="sub">Services</h3>
+    <ul class="chips">
+      <li>Program Management</li>
+      <li>IT Consulting</li>
+      <li>Backup &amp; Recovery Systems</li>
+      <li>Cybersecurity</li>
+      <li>Data Recovery</li>
+      <li>Home Networking</li>
+      <li>Information Security</li>
+      <li>Project Management</li>
+      <li>Business Analytics</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul class="langs">
+      <li><span>Ukrainian</span><b>C2</b></li>
+      <li><span>russian</span><b>Bilingual</b></li>
+      <li><span>English</span><b>C2</b></li>
+      <li><span>German</span><b>B1+</b></li>
+      <li><span>Czech</span><b>A2</b></li>
+      <li><span>Spanish</span><b>A2</b></li>
+    </ul>
+    <h3 class="sub">Test results &amp; certificates <small id="n-languages"></small></h3>
+    <ul class="docs" id="l-languages"></ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="project">
+        <h3>Encryption algorithm</h3>
+        <p class="tag">Research paper · Junior Academy of Sciences (KMAN)</p>
+        <p>A research project on an encryption algorithm that I worked on for a year. I defended it and later presented it at a conference. I didn't take first place, but it showed me how an idea can grow into something useful, and it led me to the team for my first international hackathon.</p>
+        <p><a href="https://drive.google.com/file/d/1gMXLllKz_-FlcixKunB4u1qrQHrZSEhv/view?usp=sharing" target="_blank" rel="noopener">Read the paper ↗</a></p>
+      </div>
+      <div class="project">
+        <h3>Platform for starting projects</h3>
+        <p class="tag">International hackathon, Bucharest</p>
+        <p>With a small team and very little time, we designed a platform where people can find everything they need to start a project or a research: team members, experts and financial aid. We won a bronze medal.</p>
+        <p><a href="https://drive.google.com/file/d/1ePOQkAOCQ5uJZdGTH9aWDPAR1qKbOOti/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></p>
+      </div>
+      <div class="project">
+        <img class="logo" src="logo.jpg" alt="" width="64" height="64">
+        <h3>SafeGuard</h3>
+        <p class="tag">Build Future · Kyiv Aviation University</p>
+        <p>A wearable emergency response device built on the ESP32. It is meant to get help to a person quickly when something goes wrong. I made it in Build Future, a weekly engineering program covering electrical, mechanical and civil engineering.</p>
+      </div>
+    </div>
+    <p class="note">More photos and details from these projects are on my <a href="https://www.instagram.com/rvenomchik/">Instagram</a>.</p>
+  </section>
+  <section id="awards"><h2>Competitions &amp; awards <small id="n-awards"></small></h2><ul class="docs" id="l-awards"></ul></section>
+  <section id="courses"><h2>Courses &amp; programming <small id="n-courses"></small></h2><ul class="docs" id="l-courses"></ul></section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I am open to engineering internships, hackathons and research collaborations. The fastest way to reach me is <a href="https://www.linkedin.com/in/lypenko-kyrylo-255986300/">LinkedIn</a>. You can also write on <a href="https://t.me/venom06112008k">Telegram</a>. My code lives on <a href="https://github.com/robotvenomchik">GitHub</a>.</p>
   </section>
 
   <footer>Prague, Czechia</footer>
 </main>
+
+<script>
+// To add a document: add one line to the right group. g = languages | awards | courses
+var D = "https://drive.google.com/file/d/";
+var DOCS = [
+  {g:"languages", t:"IELTS Academic", m:"Band 7.5 · PDF", u:D+"1JXcCK_suEm-Soh992ls7oKEWuDwrx7zz/view?usp=sharing"},
+  {g:"languages", t:"Duolingo English Test", m:"PDF", u:D+"1GMusXpB9wA03MqQ_MILcgBGH9KHAePQf/view?usp=sharing"},
+  {g:"languages", t:"German B2", m:"Certificate · image", u:D+"1PXlzoI4Brgs6FvyG_-EHz5Gw8F4I-pY1/view?usp=sharing"},
+
+  {g:"awards", t:"Infomatrix 2025", m:"Bronze · PDF", u:D+"1ePOQkAOCQ5uJZdGTH9aWDPAR1qKbOOti/view?usp=sharing"},
+  {g:"awards", t:"Linguistics Olympiad", m:"3rd place · PDF", u:D+"1UYjHJyFQGPYSR9kpnabqlGOuP4ubPWsH/view?usp=sharing"},
+  {g:"awards", t:"English Olympiad, school stage", m:"3rd place · PDF", u:D+"1KyA2lUrTTgRYDNN1JIlcw8B5u0WsXKxe/view?usp=sharing"},
+  {g:"awards", t:"English Olympiad, district stage", m:"PDF", u:D+"1NA2AwTYoojuj_v-g346gBMpCU7zP4Ivg/view?usp=sharing"},
+  {g:"awards", t:"English Olympiad, Kyiv stage", m:"PDF", u:D+"1c5HJ0ZYHNisHshhEtXY3QcNb3xsmvZpV/view?usp=sharing"},
+  {g:"awards", t:"EU Study Days, online part", m:"PDF", u:D+"1XnxBDnOgI24D0xAFYOxnYG31BoxiGPTj/view?usp=sharing"},
+  {g:"awards", t:"EU Study Days, offline session in Lviv", m:"PDF", u:D+"1UQ0uOBrhX_lQA5LIOdD5sj2s-VdVjmXp/view?usp=sharing"},
+  {g:"awards", t:"Certificate of Honor", m:"School · PDF", u:D+"1f_dGyp9uAnaiD4g4smdms3wVfspS-aMe/view?usp=sharing"},
+  {g:"awards", t:"Letter of thanks", m:"School · PDF", u:D+"1MUkz2HUB0js4Kr53NhDI1r4Hxi9cSqhr/view?usp=sharing"},
+
+  {g:"courses", t:"Java (Pro)", m:"PDF", u:D+"1AIfHj6bjyt0UB7tM1OkyHzQjRqm0njsY/view?usp=sharing"},
+  {g:"courses", t:"PHP (Pro)", m:"PDF", u:D+"15BdAqJxCyuUXzZGKUtZM_i3J5sxOgjxs/view?usp=sharing"},
+  {g:"courses", t:"Kubernetes", m:"PDF", u:D+"19oMCkbVQsLUMexUMO384wkHhkIrmOiq3/view?usp=sharing"},
+  {g:"courses", t:"Cybersecurity", m:"PDF", u:D+"1I3Zlnb-G7iBS-HyAoOmv-0LRXmZVbT4Z/view?usp=sharing"},
+  {g:"courses", t:"SQL", m:"PDF", u:D+"1MvHl0NWT8dRt_BdP6GJRaHcCQ9X1AA7e/view?usp=sharing"},
+  {g:"courses", t:"React", m:"PDF", u:D+"1uAi97IuhvZg3KAyIhQqIHsR1WGkcnlv1/view?usp=sharing"},
+  {g:"courses", t:"LIG CSC certificate", m:"PDF", u:D+"1wjc6t_iLNO86SoYl6JdWTQzyWOFmmp1C/view?usp=sharing"},
+  {g:"courses", t:"Business Analysis", m:"PDF", u:D+"14Ds26hEq0qW0ztaEUtpMhfr1c0MF1nqT/view?usp=sharing"},
+  {g:"courses", t:"Qualified participation confirmation", m:"German · PDF", u:D+"1brAqTiGszEA1ynOAlbunaFE5j3-dpzI7/view?usp=sharing"},
+];
+["languages","awards","courses"].forEach(function(g){
+  var list = document.getElementById("l-"+g), n = 0;
+  DOCS.forEach(function(d){
+    if(d.g !== g) return;
+    n++;
+    var li = document.createElement("li"), a = document.createElement("a"),
+        t = document.createElement("span"), m = document.createElement("span");
+    a.href = d.u; a.target = "_blank"; a.rel = "noopener";
+    t.className = "t"; t.textContent = d.t;
+    m.className = "m"; m.textContent = d.m;
+    a.appendChild(t); a.appendChild(m); li.appendChild(a); list.appendChild(li);
+  });
+  document.getElementById("n-"+g).textContent = n;
+});
+</script>
 </body>
 </html>
